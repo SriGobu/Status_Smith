@@ -1,9 +1,9 @@
 {
   "name": "statusmith",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Zero-dependency HTTP status code, dynamic messages and response handler for backend APIs.",
   "main": "dist/index.cjs",
-  "module":"dist/index.js",
+  "module": "dist/index.js",
   "exports": {
     ".": {
       "import": "./dist/index.js",

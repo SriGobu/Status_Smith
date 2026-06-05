@@ -1,13 +1,27 @@
 {
   "name": "statux",
   "version": "1.0.0",
-  "description": "",
+  "description": "Zero-dependency HTTP status code, dynamic messages and response handler for backend APIs.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "test:run": "vitest run"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "keywords": [
+    "http",
+    "status",
+    "status-codes",
+    "api-response",
+    "express",
+    "backend",
+    "messages",
+    "response-handler",
+    "nodejs"
+  ],
+  "author": "sg-dev",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "vitest": "^4.1.8"
+  }
 }

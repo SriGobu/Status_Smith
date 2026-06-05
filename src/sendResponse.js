@@ -1,3 +1,30 @@
+/**
+ * Sends a JSON response with the specified status code, message, data, and meta information.
+ * @param {*} res - The Express response object.
+ * @param {number} statusCode - The HTTP status code for the response.
+ * @param {string} message - The message for the response.
+ * @param {*} data - The data for the response.
+ * @param {*} meta - The meta information for the response.
+ * @returns {Object} - The JSON response object.
+ * @example
+ * sendResponse(res, 200, "Success", { id: 1 }, { page: 1, limit: 10 });
+ * // Response:
+ * // {
+ * //   success: true,
+ * //   statusCode: 200,
+ * //   message: "Success",
+ * //   data: { id: 1 },
+ * //   meta: { page: 1, limit: 10 }
+ * // }
+ * @example
+ * sendResponse(res, 400, "Bad Request");
+ * // Response:
+ * // {
+ * //   success: false,
+ * //   statusCode: 400,
+ * //   message: "Bad Request"
+ * // }
+ */
 export const sendResponse = (
   res,
   statusCode,

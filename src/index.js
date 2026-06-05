@@ -1,3 +1,3 @@
-export { STATUS, STATUS_CAPS } from "./status";
-export { MESSAGE, MESSAGE_CAPS } from "./message";
-export { sendResponse } from "./sendResponse";
+export { STATUS, STATUS_CAPS } from "./status.js";
+export { MESSAGE, MESSAGE_CAPS } from "./message.js";
+export { sendResponse } from "./sendResponse.js";

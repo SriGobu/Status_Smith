@@ -2,7 +2,14 @@
   "name": "statusmith",
   "version": "1.0.3",
   "description": "Zero-dependency HTTP status code, dynamic messages and response handler for backend APIs.",
-  "main": "src/index.js",
+  "main": "dist/index.cjs",
+  "module":"dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "scripts": {
     "test": "vitest",
     "test:run": "vitest run"
@@ -22,6 +29,8 @@
   "license": "MIT",
   "type": "module",
   "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.8"
   }
 }

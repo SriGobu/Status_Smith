@@ -1,28 +1,14 @@
-# StatUx
+# Statusmith
 
 > Zero-dependency HTTP status codes, dynamic messages and response handler for Node.js backends.
 
-Stop memorizing status codes. Stop rewriting the same messages. StatUx gives you a clean, consistent layer for every API response.
+Stop memorizing status codes. Stop rewriting the same messages. statusmith gives you a clean, consistent layer for every API response.
 
 ---
 
 ## Installation
 
-### Windows
-
-npm install -g statux
-
-### Mac / Linux
-
-sudo npm install -g statux
-
-### Or fix permissions permanently
-
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.bashrc
-source ~/.bashrc
-npm install -g statux
+npm install statusmith
 
 ---
 
@@ -35,7 +21,7 @@ import {
   MESSAGE,
   MESSAGE_CAPS,
   sendResponse,
-} from "statux";
+} from "statusmith";
 ```
 
 ---
@@ -154,7 +140,7 @@ sendResponse(res, STATUS.success, MESSAGE.success(), users, {
 ### Real world routes
 
 ```js
-import { STATUS, MESSAGE, sendResponse } from "statux";
+import { STATUS, MESSAGE, sendResponse } from "statusmith";
 
 // GET user
 app.get("/user/:id", async (req, res) => {
@@ -202,9 +188,9 @@ app.delete("/user/:id", async (req, res) => {
 
 ---
 
-## Why StatUx
+## Why statusmith
 
-| Without StatUx                                        | With StatUx                                                    |
+| Without statusmith                                    | With statusmith                                                |
 | ----------------------------------------------------- | -------------------------------------------------------------- |
 | `res.status(404).json({ message: "User not found" })` | `sendResponse(res, STATUS.notFound, MESSAGE.notFound("User"))` |
 | Hardcoded numbers everywhere                          | Semantic, readable constants                                   |
@@ -215,4 +201,4 @@ app.delete("/user/:id", async (req, res) => {
 
 ## License
 
-MIT © StatUx
+MIT © statusmith

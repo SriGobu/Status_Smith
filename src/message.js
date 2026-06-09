@@ -116,7 +116,15 @@ export const MESSAGE = {
    *   MESSAGE.gone(); // "This resource has been permanently deleted."
    *   MESSAGE.gone("Custom gone message"); // "Custom gone message"
    */
-  unprocessableEntry: (msg) =>
+  gone: (msg) => msg || "This resource has been permanently deleted.",
+  /**
+   * @param {string} [msg] - Optional custom message to override the default.
+   * @returns {string} - The default message for the status code, or the custom message if provided.
+   * @example
+   *   MESSAGE.unprocessableEntity(); // "Validation failed. Please check your input fields"
+   *   MESSAGE.unprocessableEntity("Custom unprocessable entity message"); // "Custom unprocessable entity message"
+   */
+  unprocessableEntity: (msg) =>
     msg || "Validation failed. Please check your input fields",
   /**
    * @param {string} [msg] - Optional custom message to override the default.
@@ -297,10 +305,10 @@ export const MESSAGE_CAPS = {
    * @param {string} [msg] - Optional custom message to override the default.
    * @returns {string} - The default message for the status code, or the custom message if provided.
    * @example
-   *   MESSAGE.UN_PROCESSABLE_ENTRY(); // "Validation failed. Please check your input fields"
-   *   MESSAGE.UN_PROCESSABLE_ENTRY("Custom unprocessable entry message"); // "Custom unprocessable entry message"
+   *   MESSAGE.UN_PROCESSABLE_ENTITY(); // "Validation failed. Please check your input fields"
+   *   MESSAGE.UN_PROCESSABLE_ENTITY("Custom unprocessable entity message"); // "Custom unprocessable entity message"
    */
-  UN_PROCESSABLE_ENTRY: (msg) =>
+  UN_PROCESSABLE_ENTITY: (msg) =>
     msg || "Validation failed. Please check your input fields",
   /**
    * @param {string} [msg] - Optional custom message to override the default.

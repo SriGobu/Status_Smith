@@ -27,8 +27,8 @@ export const STATUS = Object.freeze({
   conflict: 409,
   /** `gone: 410` - Resource has been removed */
   gone: 410,
-  /** `unprocessableEntry: 422` - Unprocessable entry */
-  unprocessableEntry: 422,
+  /** `unprocessableEntity: 422` - Unprocessable entity */
+  unprocessableEntity: 422,
   /** `tooManyRequests: 429` - Too many requests */
   tooManyRequests: 429,
   /** `serverError: 500` - Internal server error */
@@ -72,8 +72,8 @@ export const STATUS_CAPS = Object.freeze({
   CONFLICT: 409,
   /** `GONE: 410` - Resource has been removed */
   GONE: 410,
-  /** `UN_PROCESSABLE_ENTRY: 422` - Unprocessable entry */
-  UN_PROCESSABLE_ENTRY: 422,
+  /** `UN_PROCESSABLE_ENTITY: 422` - Unprocessable entity */
+  UN_PROCESSABLE_ENTITY: 422,
   /** `TOO_MANY_REQUESTS: 429` - Too many requests */
   TOO_MANY_REQUESTS: 429,
 

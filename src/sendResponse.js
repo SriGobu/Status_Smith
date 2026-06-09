@@ -43,7 +43,6 @@ export const sendResponse = (
 
   const response = {
     success: isSuccess,
-    statusCode,
     message,
   };
 
@@ -51,7 +50,12 @@ export const sendResponse = (
     response.data = data;
   }
 
-  if (meta && Object.keys(meta).length > 0) {
+  if (
+    meta !== null &&
+    meta !== undefined &&
+    typeof meta === "object" &&
+    Object.keys(meta).length > 0
+  ) {
     response.meta = meta;
   }
 

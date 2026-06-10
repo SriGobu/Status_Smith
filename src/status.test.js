@@ -21,7 +21,7 @@ describe("STATUS", () => {
     expect(STATUS.methodNotAllowed).toBe(405);
     expect(STATUS.conflict).toBe(409);
     expect(STATUS.gone).toBe(410);
-    expect(STATUS.unprocessableEntry).toBe(422);
+    expect(STATUS.unprocessableEntity).toBe(422);
     expect(STATUS.tooManyRequests).toBe(429);
   });
   it("should have correct 5xx status codes", () => {
@@ -56,7 +56,7 @@ describe("STATUS_CAPS", () => {
     expect(STATUS_CAPS.METHOD_NOT_ALLOWED).toBe(405);
     expect(STATUS_CAPS.CONFLICT).toBe(409);
     expect(STATUS_CAPS.GONE).toBe(410);
-    expect(STATUS_CAPS.UN_PROCESSABLE_ENTRY).toBe(422);
+    expect(STATUS_CAPS.UN_PROCESSABLE_ENTITY).toBe(422);
     expect(STATUS_CAPS.TOO_MANY_REQUESTS).toBe(429);
   });
   it("should have correct 5xx status codes", () => {

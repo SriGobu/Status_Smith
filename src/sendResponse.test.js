@@ -19,7 +19,6 @@ describe("sendResponse", () => {
     expect(res.status).toHaveBeenCalledWith(200);
     expect(res.json).toHaveBeenCalledWith({
       success: true,
-      statusCode: 200,
       message: "OK",
     });
   });
@@ -29,7 +28,6 @@ describe("sendResponse", () => {
     expect(res.status).toHaveBeenCalledWith(201);
     expect(res.json).toHaveBeenCalledWith({
       success: true,
-      statusCode: 201,
       message: "Created",
     });
   });
@@ -39,7 +37,6 @@ describe("sendResponse", () => {
     expect(res.status).toHaveBeenCalledWith(404);
     expect(res.json).toHaveBeenCalledWith({
       success: false,
-      statusCode: 404,
       message: "Not found",
     });
   });
@@ -49,7 +46,6 @@ describe("sendResponse", () => {
     expect(res.status).toHaveBeenCalledWith(500);
     expect(res.json).toHaveBeenCalledWith({
       success: false,
-      statusCode: 500,
       message: "Server error",
     });
   });
@@ -59,7 +55,6 @@ describe("sendResponse", () => {
     sendResponse(res, 200, "OK", data);
     expect(res.json).toHaveBeenCalledWith({
       success: true,
-      statusCode: 200,
       message: "OK",
       data,
     });
@@ -70,7 +65,6 @@ describe("sendResponse", () => {
     sendResponse(res, 200, "OK", undefined, meta);
     expect(res.json).toHaveBeenCalledWith({
       success: true,
-      statusCode: 200,
       message: "OK",
       meta,
     });
@@ -82,7 +76,6 @@ describe("sendResponse", () => {
     sendResponse(res, 200, "OK", data, meta);
     expect(res.json).toHaveBeenCalledWith({
       success: true,
-      statusCode: 200,
       message: "OK",
       data,
       meta,
@@ -94,7 +87,6 @@ describe("sendResponse", () => {
     expect(res.status).toHaveBeenCalledWith(500);
     expect(res.json).toHaveBeenCalledWith(
       expect.objectContaining({
-        statusCode: 500,
         message: "Invalid status code provided.",
       }),
     );

@@ -33,7 +33,7 @@ describe("MESSAGE", () => {
       "A conflict occurred. The resource may already exist.",
     );
     expect(MESSAGE.gone()).toBe("This resource has been permanently deleted.");
-    expect(MESSAGE.unprocessableEntry()).toBe(
+    expect(MESSAGE.unprocessableEntity()).toBe(
       "Validation failed. Please check your input fields",
     );
     expect(MESSAGE.tooManyRequests()).toBe(
@@ -82,7 +82,7 @@ describe("MESSAGE_CAPS", () => {
     expect(MESSAGE_CAPS.GONE()).toBe(
       "This resource has been permanently deleted.",
     );
-    expect(MESSAGE_CAPS.UN_PROCESSABLE_ENTRY()).toBe(
+    expect(MESSAGE_CAPS.UN_PROCESSABLE_ENTITY()).toBe(
       "Validation failed. Please check your input fields",
     );
     expect(MESSAGE_CAPS.TOO_MANY_REQUESTS()).toBe(
